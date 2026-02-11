@@ -1,0 +1,65 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider  = "postgresql"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Building {
+  id        String     @id @default(cuid())
+  name      String
+  address   String
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+  
+  amenities Amenity[]
+  users     User[]
+  bookings  Booking[]
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String
+  role      String   @default("resident") // "admin" or "resident"
+  buildingId String
+  building  Building @relation(fields: [buildingId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  bookings  Booking[]
+}
+
+model Amenity {
+  id        String   @id @default(cuid())
+  name      String
+  buildingId String
+  building  Building @relation(fields: [buildingId], references: [id], onDelete: Cascade)
+  capacity  Int      @default(1)
+  config    String   @default("{}") // JSON string for flexible rules
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  bookings  Booking[]
+  
+  @@unique([buildingId, name])
+}
+
+model Booking {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  amenityId String
+  amenity   Amenity  @relation(fields: [amenityId], references: [id], onDelete: Cascade)
+  buildingId String
+  building  Building @relation(fields: [buildingId], references: [id], onDelete: Cascade)
+  startTime DateTime
+  endTime   DateTime
+  status    String   @default("confirmed") // "confirmed", "cancelled"
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
