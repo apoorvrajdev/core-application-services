@@ -65,7 +65,7 @@ export default function Home() {
                   <span className="text-blue-600">✓</span> Rules management
                 </li>
               </ul>
-              <Link href="/admin" className="block pt-2">
+              <Link href="/book/admin" className="block pt-2">
                 <Button className="w-full">Admin Panel</Button>
               </Link>
             </CardContent>

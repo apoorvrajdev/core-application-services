@@ -1,0 +1,13 @@
+[build]
+  command = "pnpm run build"
+  publish = ".next"
+  environment = { NODE_VERSION = "18" }
+
+[dev]
+  command = "pnpm dev"
+  port = 3000
+
+[[redirects]]
+  from = "/api/*"
+  to = "/api/:splat"
+  status = 200
