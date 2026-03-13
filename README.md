@@ -1,57 +1,68 @@
-# Building Amenity Management Platform
+# 🏢 AI Building Amenity Management Platform
 
-A modern, AI-powered platform for scheduling and booking building amenities. Built with Next.js, Prisma, and Supabase (PostgreSQL).
+![Next.js](https://img.shields.io/badge/Next.js-14-black)
+![Supabase](https://img.shields.io/badge/Database-Supabase-green)
+![Prisma](https://img.shields.io/badge/ORM-Prisma-blue)
+![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL-blue)
+![License](https://img.shields.io/badge/License-MIT-yellow)
 
-## Features
-- Resident and admin interfaces
-- Amenity management and booking
-- Supabase PostgreSQL integration
-- Modern UI components
+An **AI-powered Building Amenity Management Platform** that allows residents to easily **book, schedule, and manage shared building amenities** such as gyms, swimming pools, meeting rooms, and event halls.
 
-## Getting Started
+The system provides **separate resident and admin interfaces**, enabling efficient **amenity scheduling, conflict prevention, and centralized management** using a modern full-stack architecture.
 
-### Prerequisites
-- Node.js (v18+ recommended)
-- pnpm (or npm/yarn)
-- Supabase project (PostgreSQL database)
+Built using **Next.js, Supabase, Prisma ORM, and PostgreSQL** for high scalability and performance.
 
-### Setup
-1. **Clone the repository**
-2. **Install dependencies:**
-   ```sh
-   pnpm install
-   ```
-3. **Configure environment variables:**
-   - Copy `.env.local` and fill in your Supabase credentials:
-     - `NEXT_PUBLIC_SUPABASE_URL`
-     - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
-     - `DATABASE_URL` (Postgres connection string)
-     - `DIRECT_URL` (optional, for migrations)
-4. **Push the database schema:**
-   ```sh
-   npx prisma db push
-   ```
-5. **Generate Prisma client:**
-   ```sh
-   npx prisma generate
-   ```
-6. **Run the development server:**
-   ```sh
-   pnpm dev
-   ```
-   Open [http://localhost:3000](http://localhost:3000) to view the app.
+---
 
-## Production Build
-```sh
-pnpm run build
-pnpm start
-```
+# 🚀 Live Demo
 
-## Project Structure
-- `app/` - Next.js app directory (routes, pages, API)
-- `components/` - UI and feature components
-- `lib/` - Prisma, Supabase, and utility libraries
-- `prisma/` - Prisma schema and config
+[![Open App](https://img.shields.io/badge/Open%20Live%20App-Coming%20Soon-blue)](#)
 
-## License
-MIT
+Try the **AI-powered Building Amenity Booking Platform** here once deployed.
+
+---
+
+# 📸 Application Preview
+
+## Resident Dashboard
+<img src="results/resident-dashboard.png" width="800">
+
+## Amenity Booking Interface
+<img src="results/amenity-booking.png" width="800">
+
+## Admin Amenity Management
+<img src="results/admin-dashboard.png" width="800">
+
+*(Replace these screenshots with real images from your `/results` folder)*
+
+---
+
+# ⚡ Key Features
+
+### 🏢 Amenity Booking System
+- Residents can book building amenities easily
+- Prevents booking conflicts automatically
+- Real-time availability tracking
+
+### 👥 Role-Based Access
+- **Resident Interface** → Book and manage amenities
+- **Admin Dashboard** → Manage amenities and reservations
+
+### 🗄️ Secure Database Integration
+- Supabase PostgreSQL backend
+- Prisma ORM for database queries
+- Structured relational database design
+
+### ⚡ Modern UI/UX
+- Built with **Next.js App Router**
+- Responsive design
+- Smooth booking workflow
+
+### 🔒 Authentication & Data Security
+- Secure Supabase authentication
+- Protected API routes
+- Safe database operations
+
+---
+
+# 🧠 System Architecture
