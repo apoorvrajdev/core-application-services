@@ -66,3 +66,114 @@ Try the **AI-powered Building Amenity Booking Platform** here once deployed.
 ---
 
 # 🧠 System Architecture
+Frontend (Next.js App Router)
+│
+│ API Requests
+▼
+Backend Services (Next.js Server Actions)
+│
+│ Prisma ORM
+▼
+Supabase PostgreSQL Database
+
+
+---
+
+# 🛠 Tech Stack
+
+| Technology | Purpose |
+|------------|--------|
+| **Next.js 14** | Full-stack React framework |
+| **Supabase** | Backend as a service |
+| **PostgreSQL** | Relational database |
+| **Prisma ORM** | Database access and migrations |
+| **TypeScript** | Type safety |
+| **Tailwind CSS** | Modern UI styling |
+
+---
+
+# 📂 Project Structure
+Building-Amenity-Platform
+│
+├── app/ # Next.js app directory (routes + API)
+├── components/ # UI components
+├── lib/ # Database & utility functions
+├── prisma/ # Prisma schema
+├── public/ # Static assets
+├── results/ # Screenshots for README
+└── README.md
+
+
+---
+
+# ⚙️ Installation & Setup
+
+## 1️⃣ Clone Repository
+
+```bash
+git clone https://github.com/yourusername/building-amenity-management-platform.git
+cd building-amenity-management-platform
+2️⃣ Install Dependencies
+
+Using pnpm (recommended):
+
+pnpm install
+
+or
+
+npm install
+3️⃣ Configure Environment Variables
+
+Create a .env.local file and add:
+
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+
+DATABASE_URL=your_postgres_connection_string
+DIRECT_URL=your_direct_database_url
+4️⃣ Push Database Schema
+npx prisma db push
+5️⃣ Generate Prisma Client
+npx prisma generate
+6️⃣ Start Development Server
+pnpm dev
+
+Open in browser:
+
+http://localhost:3000
+🚀 Production Build
+pnpm build
+pnpm start
+📊 Future Improvements
+
+AI-powered amenity demand prediction
+
+Smart booking recommendations
+
+Resident notifications
+
+Calendar integration
+
+Payment integration for premium amenities
+
+🤝 Contributing
+
+Contributions are welcome!
+
+Fork the repository
+
+Create a new feature branch
+
+Submit a Pull Request
+
+📜 License
+
+This project is licensed under the MIT License.
+
+👨‍💻 Author
+
+Apoorv Raj
+
+AI Engineer | Full Stack Developer | Machine Learning Enthusiast
+
+Building AI-powered real-world systems and scalable platforms.
