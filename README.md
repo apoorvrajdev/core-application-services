@@ -267,3 +267,6 @@ This project is licensed under the **MIT License**.
 AI Engineer • Full Stack Developer • Machine Learning Enthusiast
 
 Building **AI-powered real-world systems and scalable platforms**.
+---
+
+⭐ If you found this project useful, consider giving it a **star on GitHub**.
